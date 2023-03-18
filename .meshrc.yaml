@@ -1,0 +1,20 @@
+serve:
+  playground: true
+  browser: false
+
+sources:
+  - name: SWAPI
+    handler:
+      graphql:
+        endpoint: https://swapi-graphql.netlify.app/.netlify/functions/index
+
+plugins:
+  - rateLimit:
+      config:
+        # Add as many rules as you want
+        - type: Root
+          field: allFilms
+          max: 5 # requests limit for a time period
+          ttl: 30000 # time period
+          identifier: '{context.req.socket.remoteAddress}'
+
