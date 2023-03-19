@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "mesh build",
-    "clean": "rm -rf .mesh/",
     "start": "mesh start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "mesh dev",
+    "clean": "rm -rf .mesh/"
   },
   "author": "",
   "license": "ISC",

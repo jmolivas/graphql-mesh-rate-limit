@@ -17,4 +17,3 @@ plugins:
           max: 5 # requests limit for a time period
           ttl: 30000 # time period
           identifier: '{context.req.socket.remoteAddress}'
-
